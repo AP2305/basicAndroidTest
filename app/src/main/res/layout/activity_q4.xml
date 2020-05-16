@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Q4Activity">
+
+    <TabHost
+        android:id="@+id/tab_host"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@android:dimen/notification_large_icon_height"
+            >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tab1">
+
+            <EditText
+                android:id="@+id/et_factorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Enter the number"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:autofillHints="" />
+            
+            <Button
+                android:id="@+id/btn_factorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/et_factorial"
+                android:layout_margin="20dp"
+                android:onClick="calculateFactorial"
+                android:background="@color/colorPrimary"
+                android:text="Give Factorial"
+                android:textColor="@color/btnText"/>
+            
+            <TextView
+                android:id="@+id/tv_factorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_factorial"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tab2">
+
+            <EditText
+                android:id="@+id/et_sod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Enter the number"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:autofillHints="" />
+
+            <Button
+                android:id="@+id/btn_sod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/et_sod"
+                android:layout_margin="20dp"
+                android:onClick="calculateSumOfDigits"
+                android:background="@color/colorPrimary"
+                android:text="Give Sum of Digits"
+                android:textColor="@color/btnText"/>
+
+            <TextView
+                android:id="@+id/tv_sod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_sod"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tab3">
+
+            <EditText
+                android:id="@+id/et_palindrome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Enter the string"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:autofillHints=""
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btn_palindrome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/et_palindrome"
+                android:layout_margin="20dp"
+                android:onClick="checkPalindrome"
+                android:background="@color/colorPrimary"
+                android:text="Check if Palindrome"
+                android:textColor="@color/btnText"/>
+
+            <TextView
+                android:id="@+id/tv_palindrome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_palindrome"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </TabHost>
+</androidx.constraintlayout.widget.ConstraintLayout>

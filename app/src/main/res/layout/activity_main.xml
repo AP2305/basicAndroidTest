@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_q1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Q1"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/btnText"
+        android:textStyle="bold"
+        android:onClick="q1Clicked"
+        android:layout_margin="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_q2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Q2"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/btnText"
+        android:textStyle="bold"
+        android:onClick="q2Clicked"
+        android:layout_margin="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_q1"
+        />
+
+    <Button
+        android:id="@+id/btn_q3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Q3"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/btnText"
+        android:textStyle="bold"
+        android:layout_margin="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_q2"
+        />
+
+    <Button
+        android:id="@+id/btn_q4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Q4"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/btnText"
+        android:textStyle="bold"
+        android:onClick="q4Clicked"
+        android:layout_margin="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_q3"
+        />
+
+    <Button
+        android:id="@+id/btn_q5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Q5"
+        android:onClick="q5Clicked"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/btnText"
+        android:textStyle="bold"
+        android:layout_margin="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_q4"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

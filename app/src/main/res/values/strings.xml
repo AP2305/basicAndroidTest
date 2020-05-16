@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GLS Android Exam</string>
+    <string-array name="currency_conversions">
+        <item>Rupee to Dollar [1 INR = 0.02 USD]</item>
+        <item>Rupee to Yen [1 INR = 1.50 JPY]</item>
+        <item>Rupee to Euro [1 INR = 0.013 EUR]</item>
+        <item>Rupee to Pound [1 INR = 0.012 GBP]</item>
+    </string-array>
+    <string-array name="car_model">
+        <item>Normal</item>
+        <item>Sedan</item>
+        <item>XUV</item>
+        <item>SUV</item>
+    </string-array>
+</resources>
