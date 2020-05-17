@@ -21,7 +21,7 @@ public class StudentDBHelper extends SQLiteOpenHelper {
     private static final String STUDENT_COL_3 = "student_lname";
     private static final String STUDENT_COL_4 = "student_sem";
 
-    StudentDBHelper(@Nullable Context context) {
+    public StudentDBHelper(@Nullable Context context) {
         super(context, DB_NAME,null,1);
     }
 

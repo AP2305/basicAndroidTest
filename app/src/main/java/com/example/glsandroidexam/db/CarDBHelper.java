@@ -19,7 +19,7 @@ public class CarDBHelper extends SQLiteOpenHelper {
     private static final String CAR_COL_3 = "car_type";
     private static final String CAR_COL_4 = "car_year";
 
-    CarDBHelper(@Nullable Context context) {
+    public CarDBHelper(@Nullable Context context) {
         super(context, DB_NAME,null,1);
     }
 

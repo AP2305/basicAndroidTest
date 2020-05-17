@@ -42,7 +42,7 @@ public class Q3Activity extends AppCompatActivity {
     private void updateSpinner() {
         studentList = studentDBHelper.getData();
         studentList.add(0,new Student("-1","Select a Student","",""));
-        sp_student.setAdapter(new ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,studentList));
+        sp_student.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, studentList));
     }
 
     public void registerStudentClicked(View view) {
