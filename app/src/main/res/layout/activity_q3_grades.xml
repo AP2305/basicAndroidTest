@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Q3ActivityGrades">
+
+    <TextView
+        android:id="@+id/tv_std_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grade Center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tv_std_fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="First Name: "
+        app:layout_constraintTop_toBottomOf="@id/tv_std_grade"
+        android:layout_margin="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_std_lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Name: "
+        app:layout_constraintTop_toBottomOf="@id/tv_std_fname"
+        android:layout_margin="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_std_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Id: "
+        app:layout_constraintTop_toBottomOf="@id/tv_std_lname"
+        android:layout_margin="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_std_sem1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semester I input: "
+        app:layout_constraintStart_toStartOf="@id/tv_std_id"
+        app:layout_constraintEnd_toStartOf="@id/et_egp1"
+        app:layout_constraintTop_toBottomOf="@id/tv_std_id"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/et_egp1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Earned grade points"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@id/tv_std_sem1"
+        app:layout_constraintBottom_toBottomOf="@id/tv_std_sem1"
+        app:layout_constraintStart_toEndOf="@id/tv_std_sem1"
+        app:layout_constraintEnd_toEndOf="@id/tv_std_id"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/et_credit1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Credits"
+        android:inputType="number"
+        android:autofillHints=""
+        app:layout_constraintTop_toBottomOf="@id/et_egp1"
+        app:layout_constraintStart_toStartOf="@id/et_egp1"
+        app:layout_constraintEnd_toEndOf="@id/et_egp1"
+        />
+
+    <TextView
+        android:id="@+id/tv_std_sem2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semester II input: "
+        app:layout_constraintStart_toStartOf="@id/tv_std_id"
+        app:layout_constraintEnd_toStartOf="@id/et_egp2"
+        app:layout_constraintTop_toBottomOf="@id/et_credit1"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/et_egp2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Earned grade points"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@id/tv_std_sem2"
+        app:layout_constraintBottom_toBottomOf="@id/tv_std_sem2"
+        app:layout_constraintStart_toEndOf="@id/tv_std_sem2"
+        app:layout_constraintEnd_toEndOf="@id/tv_std_id"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/et_credit2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Credits"
+        android:inputType="number"
+        android:autofillHints=""
+        app:layout_constraintTop_toBottomOf="@id/et_egp2"
+        app:layout_constraintStart_toStartOf="@id/et_egp2"
+        app:layout_constraintEnd_toEndOf="@id/et_egp2"
+        />
+
+    <Button
+        android:id="@+id/btn_student_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Grades"
+        android:onClick="calculateGrades"
+        app:layout_constraintTop_toBottomOf="@id/et_credit2"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/btnText"/>
+
+    <TextView
+        android:id="@+id/tv_std_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_student_calculate"
+        android:layout_margin="20dp"
+        android:textSize="20sp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

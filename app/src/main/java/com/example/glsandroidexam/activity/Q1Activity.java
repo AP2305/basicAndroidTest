@@ -1,4 +1,4 @@
-package com.example.glsandroidexam;
+package com.example.glsandroidexam.activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,13 +7,17 @@ import androidx.core.app.NotificationManagerCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.database.Cursor;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.glsandroidexam.R;
+import com.example.glsandroidexam.db.CarDBHelper;
+import com.example.glsandroidexam.model.Car;
 
 public class Q1Activity extends AppCompatActivity {
 
@@ -36,12 +40,16 @@ public class Q1Activity extends AppCompatActivity {
                 .setContentTitle("Inserted!!")
                 .setContentText("Record Added Successfully")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-        Cursor cursor = carDBHelper.getData();
-        Toast.makeText(this,cursor.getCount()+"",Toast.LENGTH_SHORT).show();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void registerClicked(View view) {
+        if(et_car_chasis.getText().toString().equals("")
+                ||et_car_model.getText().toString().equals("")
+                ||et_car_year.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(),"Empty Values not allowed",Toast.LENGTH_SHORT).show();
+            return;
+        }
         if(carDBHelper.insertData(new Car(
                 Integer.parseInt(et_car_chasis.getText().toString()),
                 Integer.parseInt(et_car_year.getText().toString()),
@@ -50,13 +58,25 @@ public class Q1Activity extends AppCompatActivity {
 
              NotificationManagerCompat manager = NotificationManagerCompat.from(this);
              manager.notify(1,builder.build());
-
+             reset();
         }
     }
+
+    private void reset() {
+        et_car_chasis.setText("");
+        et_car_model.setText("");
+        sp_car_type.setSelection(0);
+        et_car_year.setText("");
+    }
+
     private void createNotificationChannel(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationManager manager = getSystemService(NotificationManager.class);
             if (manager != null) manager.createNotificationChannel(new NotificationChannel("normal","Car",NotificationManager.IMPORTANCE_DEFAULT));
         }
+    }
+
+    public void searchClicked(View view) {
+        startActivity(new Intent(getApplicationContext(),Q1ActivitySearch.class));
     }
 }

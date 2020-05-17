@@ -1,4 +1,4 @@
-package com.example.glsandroidexam;
+package com.example.glsandroidexam.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.glsandroidexam.R;
 
 import java.text.DecimalFormat;
 
@@ -23,6 +26,11 @@ public class Q5Activity extends AppCompatActivity {
     }
 
     public void operatorClicked(View view) {
+        if(et_cal_operand1.getText().toString().equals("")
+                ||et_cal_operand2.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(),"Empty Values not allowed",Toast.LENGTH_SHORT).show();
+            return;
+        }
         double number1 = Double.parseDouble(et_cal_operand1.getText().toString());
         double number2 = Double.parseDouble(et_cal_operand2.getText().toString());
         double result = 0;

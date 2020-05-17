@@ -1,4 +1,4 @@
-package com.example.glsandroidexam;
+package com.example.glsandroidexam.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.glsandroidexam.R;
 
 public class Q4Activity extends AppCompatActivity {
 
@@ -42,6 +45,10 @@ public class Q4Activity extends AppCompatActivity {
     }
 
     public void calculateFactorial(View view) {
+        if(et_factorial.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(),"Empty Values not allowed",Toast.LENGTH_SHORT).show();
+            return;
+        }
         int number = Integer.parseInt(et_factorial.getText().toString());
         String format = number+"! = "+factorial(number);
         tv_factorial.setText(format);
@@ -55,6 +62,10 @@ public class Q4Activity extends AppCompatActivity {
 
 
     public void calculateSumOfDigits(View view) {
+        if(et_sod.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(),"Empty Values not allowed",Toast.LENGTH_SHORT).show();
+            return;
+        }
         int number = Integer.parseInt(et_sod.getText().toString());
         String format = "Sum of Digits = "+sumOfDigits(number);
         tv_sod.setText(format);
@@ -71,6 +82,10 @@ public class Q4Activity extends AppCompatActivity {
     }
 
     public void checkPalindrome(View view) {
+        if(et_palindrome.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(),"Empty Values not allowed",Toast.LENGTH_SHORT).show();
+            return;
+        }
         String format = et_palindrome.getText().toString() + " is" + isPalindrome(et_palindrome.getText().toString()) + " a Palindrome";
         tv_palindrome.setText(format);
     }

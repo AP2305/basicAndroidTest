@@ -1,4 +1,4 @@
-package com.example.glsandroidexam;
+package com.example.glsandroidexam.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.glsandroidexam.R;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
@@ -26,6 +29,10 @@ public class Q2Activity extends AppCompatActivity {
     }
 
     public void convertCurrency(View view) {
+        if(et_currency.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(),"Empty Values not allowed",Toast.LENGTH_SHORT).show();
+            return;
+        }
         double result=0;
         String convert="";
         int amount = Integer.parseInt(et_currency.getText().toString());
