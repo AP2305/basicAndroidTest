@@ -1,15 +1,15 @@
 # basicAndroidTest
 Some Practice
 
-This is just some basic concepts of Android as a prt of revision.
+This are just some basic concepts of Android as a part of revision.
 
-This repo includes 5 types of questions.
+This repo contains 5 types of questions:
 
-Q1-> Saving to Local SQLite Database and searching inside the same
+Q1-> Saving to a Local SQLite Database and searching inside the same
 
 Q2-> Currency Conversion by Spinner selection
 
-Q3-> Registering students into SQLite and dynamically filing Spinner using customized Adapter and Calculating SGPA, CGPA and Percentage
+Q3-> Registering students into SQLite and dynamically filing Spinner using customized Adapter and calculating SGPA, CGPA and Percentage
 
 Q4-> Combined [Factorial, Sum of Digits, Palindrome]
 
